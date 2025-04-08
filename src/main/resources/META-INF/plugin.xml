@@ -1,0 +1,24 @@
+    <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <depends>org.jetbrains.android</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider
+                implementation="io.github.arlanchikdrey.plugins.featuremodulecraft.provider.FeatureModuleWizardTemplateProvider"/>
+    </extensions>
+
+    <actions resource-bundle="messages.strings">
+        <action id="CreateFeaturesModelActionId"
+                class="io.github.arlanchikdrey.plugins.featuremodulecraft.action.CreateFeaturesModuleAction"
+                description="%template.description%"
+                icon="/icons/modules.svg">
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
