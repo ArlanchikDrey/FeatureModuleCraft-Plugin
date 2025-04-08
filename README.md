@@ -13,7 +13,7 @@ Plugin for creating feature modules api and impl.
 
 ## Install
 - **Installing manually:**
-    - Download the plugin package on [GitHub Releases][gh:releases].
+    - Download the plugin package on [GitHub Releases](https://github.com/ArlanchikDrey/FeatureModuleCraft-Plugin/releases).
     - <kbd>Preferences(Settings)</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd> >
       Select the plugin jar and install.
 
