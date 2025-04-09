@@ -1,0 +1,10 @@
+[versions]
+kotlin = "2.0.0"
+detekt = "1.23.7"
+
+[libraries]
+detekt-formattig = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
