@@ -1,9 +1,12 @@
+import io.gitlab.arturbosch.detekt.Detekt
+import io.gitlab.arturbosch.detekt.DetektCreateBaselineTask
 import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "2.0.0"
+    alias(libs.plugins.kotlin.jvm)
     id("org.jetbrains.intellij.platform") version "2.4.0"
+    alias(libs.plugins.detekt)
 }
 
 group = "io.github.arlanchikdrey.plugins"
@@ -22,6 +25,7 @@ dependencies {
         androidStudio("2024.2.2.13")
         bundledPlugin("org.jetbrains.android")
     }
+    detektPlugins(libs.detekt.formattig)
 }
 
 // Configure Gradle IntelliJ Plugin
@@ -54,6 +58,8 @@ intellijPlatform {
     }
 }
 
+configureDetekt()
+
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
@@ -62,5 +68,56 @@ tasks {
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
         kotlinOptions.jvmTarget = "17"
+    }
+}
+
+fun Project.configureDetekt() {
+    val configPath = "${project.rootDir}/config/detekt/detekt.yml"
+    val baselinePath = "${project.rootDir}/config/detekt/baseline.xml"
+    val kotlinFiles = "**/*.kt"
+    val resourceFiles = "**/resources/**"
+    val buildFiles = "**/build/**"
+
+    detekt {
+        config.setFrom(configPath)
+        baseline = file(baselinePath)
+        autoCorrect = false
+    }
+
+    tasks.withType<Detekt>().configureEach {
+        include(kotlinFiles)
+        exclude(resourceFiles, buildFiles)
+        reports {
+            html.required.set(true)
+            xml.required.set(true)
+        }
+    }
+
+    val projectSource = file(projectDir)
+    val configFile = files(configPath)
+
+    tasks.register("detektFix", Detekt::class) {
+        ignoreFailures = false
+        autoCorrect = true
+        buildUponDefaultConfig = true
+        setSource(projectSource)
+        config.setFrom(configFile)
+        include(kotlinFiles)
+        exclude(resourceFiles, buildFiles)
+        reports {
+            html.required.set(true)
+            xml.required.set(false)
+            txt.required.set(false)
+        }
+    }
+
+    tasks.register("detektCreateBaseline", DetektCreateBaselineTask::class) {
+        buildUponDefaultConfig = true
+        ignoreFailures = true
+        setSource(files(rootDir))
+        config.setFrom(configFile)
+        baseline.set(file(baselinePath))
+        include(kotlinFiles)
+        exclude(resourceFiles, buildFiles)
     }
 }

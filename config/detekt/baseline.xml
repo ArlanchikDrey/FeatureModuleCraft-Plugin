@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>CommentSpacing:CreateFeaturesModuleDialog.kt$CreateFeaturesModuleDialog$//autofocus</ID>
+    <ID>FinalNewline:BuildGradleModel.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.model.BuildGradleModel.kt</ID>
+    <ID>FinalNewline:BuildGradleRecipe.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.template.recipes.BuildGradleRecipe.kt</ID>
+    <ID>FinalNewline:CreateFeatureModulesUseCase.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.usecase.CreateFeatureModulesUseCase.kt</ID>
+    <ID>FinalNewline:CreateFeaturesModuleAction.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.action.CreateFeaturesModuleAction.kt</ID>
+    <ID>FinalNewline:CreateFeaturesModuleDialog.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.presentation.CreateFeaturesModuleDialog.kt</ID>
+    <ID>FinalNewline:DiRecipe.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.template.recipes.DiRecipe.kt</ID>
+    <ID>FinalNewline:FeatureModuleWizardTemplateProvider.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.provider.FeatureModuleWizardTemplateProvider.kt</ID>
+    <ID>FinalNewline:FeatureNameValidatorUseCase.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.usecase.FeatureNameValidatorUseCase.kt</ID>
+    <ID>FinalNewline:GitIgnoreModel.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.model.GitIgnoreModel.kt</ID>
+    <ID>FinalNewline:HiltModuleModel.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.model.HiltModuleModel.kt</ID>
+    <ID>FinalNewline:ModuleRecipe.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.template.recipes.ModuleRecipe.kt</ID>
+    <ID>FinalNewline:RecipeExecutorExt.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.ext.RecipeExecutorExt.kt</ID>
+    <ID>FinalNewline:StringExt.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.ext.StringExt.kt</ID>
+    <ID>FinalNewline:StringsBundle.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.bundle.StringsBundle.kt</ID>
+    <ID>FinalNewline:featureModule.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.template.featureModule.kt</ID>
+    <ID>Indentation:BuildGradleModel.kt$BuildGradleModel$ </ID>
+    <ID>Indentation:GitIgnoreModel.kt$GitIgnoreModel$ </ID>
+    <ID>Indentation:HiltModuleModel.kt$HiltModuleModel$ </ID>
+    <ID>NestedBlockDepth:CreateFeatureModulesUseCase.kt$CreateFeatureModulesUseCase$private fun createPackageImplDirs( rootPath: String, packageName: String, featureName: String, additionalParameters: AdditionalParameters )</ID>
+    <ID>NewLineAtEndOfFile:BuildGradleModel.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.model.BuildGradleModel.kt</ID>
+    <ID>NewLineAtEndOfFile:BuildGradleRecipe.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.template.recipes.BuildGradleRecipe.kt</ID>
+    <ID>NewLineAtEndOfFile:CreateFeatureModulesUseCase.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.usecase.CreateFeatureModulesUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:CreateFeaturesModuleAction.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.action.CreateFeaturesModuleAction.kt</ID>
+    <ID>NewLineAtEndOfFile:CreateFeaturesModuleDialog.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.presentation.CreateFeaturesModuleDialog.kt</ID>
+    <ID>NewLineAtEndOfFile:DiRecipe.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.template.recipes.DiRecipe.kt</ID>
+    <ID>NewLineAtEndOfFile:FeatureModuleWizardTemplateProvider.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.provider.FeatureModuleWizardTemplateProvider.kt</ID>
+    <ID>NewLineAtEndOfFile:FeatureNameValidatorUseCase.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.usecase.FeatureNameValidatorUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:GitIgnoreModel.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.model.GitIgnoreModel.kt</ID>
+    <ID>NewLineAtEndOfFile:HiltModuleModel.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.domain.model.HiltModuleModel.kt</ID>
+    <ID>NewLineAtEndOfFile:ModuleRecipe.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.template.recipes.ModuleRecipe.kt</ID>
+    <ID>NewLineAtEndOfFile:RecipeExecutorExt.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.ext.RecipeExecutorExt.kt</ID>
+    <ID>NewLineAtEndOfFile:StringExt.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.ext.StringExt.kt</ID>
+    <ID>NewLineAtEndOfFile:StringsBundle.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.bundle.StringsBundle.kt</ID>
+    <ID>NewLineAtEndOfFile:featureModule.kt$io.github.arlanchikdrey.plugins.featuremodulecraft.template.featureModule.kt</ID>
+    <ID>NoWildcardImports:featureModule.kt$import com.android.tools.idea.wizard.template.*</ID>
+    <ID>ReturnCount:CreateFeatureModulesUseCase.kt$CreateFeatureModulesUseCase$operator fun invoke( projectPath: String, parentFolder: VirtualFile, packageName: String, featureName: String, additionalParameters: AdditionalParameters )</ID>
+    <ID>SpacingAroundKeyword:CreateFeaturesModuleDialog.kt$CreateFeaturesModuleDialog$when</ID>
+    <ID>StringTemplate:DiRecipe.kt$${packageName}</ID>
+    <ID>StringTemplate:DiRecipe.kt$${srcPath}</ID>
+    <ID>WildcardImport:featureModule.kt$import com.android.tools.idea.wizard.template.*</ID>
+  </CurrentIssues>
+</SmellBaseline>
