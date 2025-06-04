@@ -46,13 +46,19 @@ val featureModuleTemplate: Template
             default = false
         }
 
+        val composeEnabled = booleanParameter {
+            name = StringsBundle.get(StringsBundle.KEY_COMPOSE_ENABLED)
+            default = false
+        }
+
         widgets(
             TextFieldWidget(featureName),
             Separator,
             CheckBoxWidget(domainLayerEnabled),
             CheckBoxWidget(dataLayerEnabled),
             CheckBoxWidget(presentationLayerEnabled),
-            CheckBoxWidget(diFilesEnabled)
+            CheckBoxWidget(diFilesEnabled),
+            CheckBoxWidget(composeEnabled)
         )
 
         recipe = { data: TemplateData ->

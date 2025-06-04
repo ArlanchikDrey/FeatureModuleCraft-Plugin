@@ -40,6 +40,8 @@ class CreateFeaturesModuleDialog(
         private set
     var presentationLayerEnabledCheckBox: Cell<JBCheckBox>? = null
         private set
+    var composeEnabledCheckBox: Cell<JBCheckBox>? = null
+        private set
 
     override fun createCenterPanel(): JComponent {
         val featureNameValidator: ValidationInfoBuilder.(JBTextField) -> ValidationInfo? = { textField ->
@@ -85,6 +87,9 @@ class CreateFeaturesModuleDialog(
             row {
                 presentationLayerEnabledCheckBox =
                     checkBox(StringsBundle.get(StringsBundle.KEY_PRESENTATION_LAYER_ENABLED))
+            }
+            row {
+                composeEnabledCheckBox = checkBox(StringsBundle.get(StringsBundle.KEY_COMPOSE_ENABLED))
             }
         }
     }

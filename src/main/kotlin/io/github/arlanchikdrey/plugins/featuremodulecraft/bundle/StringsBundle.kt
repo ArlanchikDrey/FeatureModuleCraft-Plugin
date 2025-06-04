@@ -17,6 +17,7 @@ object StringsBundle : DynamicBundle(BUNDLE_STRINGS) {
     const val KEY_DOMAIN_LAYER_ENABLED = "template.domainLayerEnabled"
     const val KEY_DATA_LAYER_ENABLED = "template.dataLayerEnabled"
     const val KEY_PRESENTATION_LAYER_ENABLED = "template.presentationLayerEnabled"
+    const val KEY_COMPOSE_ENABLED = "template.composeLayerEnabled"
 
     const val KEY_EMPTY_FIELD = "validate.emptyField"
     const val KEY_FOLDER_ALREADY_EXISTS = "validate.folderAlreadyExists"

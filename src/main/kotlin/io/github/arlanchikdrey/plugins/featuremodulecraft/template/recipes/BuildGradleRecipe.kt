@@ -20,7 +20,8 @@ fun RecipeExecutor.createBuildGradle(
         content = BuildGradleModel.impl(
             diEnabled = diEnabled,
             apiProjectPath = moduleName,
-            packageName = packageName
+            packageName = packageName,
+            composeEnabled = false
         )
     )
 

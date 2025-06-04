@@ -32,7 +32,8 @@ class CreateFeatureModulesUseCase {
         val diFilesEnabled: Boolean,
         val domainLayerEnabled: Boolean,
         val dataLayerEnabled: Boolean,
-        val presentationLayerEnabled: Boolean
+        val presentationLayerEnabled: Boolean,
+        val composeEnabled: Boolean
     )
 
     operator fun invoke(
@@ -66,7 +67,8 @@ class CreateFeatureModulesUseCase {
             buildGradleModel = BuildGradleModel.impl(
                 packageName = "$packageName.impl",
                 apiProjectPath = ":${parentFolder.name}:$featureModuleName:$featureModuleName$API_SUFFIX",
-                diEnabled = additionalParameters.diFilesEnabled
+                diEnabled = additionalParameters.diFilesEnabled,
+                composeEnabled = additionalParameters.composeEnabled
             )
         )
         if (featureImplPath.isNullOrBlank()) return
