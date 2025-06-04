@@ -30,6 +30,7 @@ class CreateFeaturesModuleAction : AnAction(StringsBundle.get(StringsBundle.KEY_
                 val domainLayerEnabled = domainLayerEnabledCheckBox?.component?.isSelected ?: false
                 val dataLayerEnabled = dataLayerEnabledCheckBox?.component?.isSelected ?: false
                 val presentationLayerEnabled = presentationLayerEnabledCheckBox?.component?.isSelected ?: false
+                val composeEnabled = composeEnabledCheckBox?.component?.isSelected ?: false
 
                 createFeatureModulesUseCase(
                     projectPath = projectPath,
@@ -40,7 +41,8 @@ class CreateFeaturesModuleAction : AnAction(StringsBundle.get(StringsBundle.KEY_
                         diFilesEnabled = diFilesEnabled,
                         domainLayerEnabled = domainLayerEnabled,
                         dataLayerEnabled = dataLayerEnabled,
-                        presentationLayerEnabled = presentationLayerEnabled
+                        presentationLayerEnabled = presentationLayerEnabled,
+                        composeEnabled = composeEnabled
                     )
                 )
             }

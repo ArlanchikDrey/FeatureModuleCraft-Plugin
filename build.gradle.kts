@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "io.github.arlanchikdrey.plugins"
-version = "0.0.9"
+version = "0.0.10"
 
 repositories {
     mavenCentral()
@@ -36,7 +36,7 @@ intellijPlatform {
     pluginConfiguration {
         id = "feature-module-craft-id"
         name = "FeatureModuleCraft"
-        version = "0.0.9"
+        version = "0.0.10"
         description = "Creating feature modules api and impl"
         ideaVersion {
             sinceBuild = "242"

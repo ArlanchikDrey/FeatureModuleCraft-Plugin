@@ -41,13 +41,15 @@ object BuildGradleModel {
     fun impl(
         packageName: String,
         apiProjectPath: String,
-        diEnabled: Boolean
+        diEnabled: Boolean,
+        composeEnabled: Boolean
     ): ImplBuildGradleModel {
         return """
         plugins {
             alias(libs.plugins.android.library)
             alias(libs.plugins.kotlin.android)
             ${"alias(libs.plugins.ksp)".appendIf(diEnabled)}
+            ${"alias(libs.plugins.kotlin.compose)".appendIf(composeEnabled)}
         }
         
         android {
@@ -66,6 +68,11 @@ object BuildGradleModel {
             kotlinOptions {
                 jvmTarget = "11"
             }
+            ${kotlin.run { """
+            buildFeatures {
+                compose = true
+            }
+            """.trimIndent() }.appendIf(composeEnabled)}
         }
         
         dependencies {
@@ -75,6 +82,13 @@ object BuildGradleModel {
             
             ${"implementation(libs.dagger.hilt)".appendIf(diEnabled)}
             ${"ksp(libs.dagger.hilt.compiler)".appendIf(diEnabled)}
+            
+            ${kotlin.run { """ 
+            // compose    
+            implementation(libs.bundles.compose)
+            debugImplementation(libs.androidx.ui.tooling)
+            debugImplementation(libs.androidx.ui.test.manifest)
+            """.trimIndent() }.appendIf(composeEnabled)}
             
             testImplementation(libs.junit)
         }
